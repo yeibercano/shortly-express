@@ -38,6 +38,7 @@ function(req, res) {
   Links.reset().fetch().then(function(links) {
     res.send(200, links.models);
   });
+  res.render('index'); // added
 });
 
 app.post('/links', 
@@ -79,6 +80,8 @@ function(req, res) {
 // e.g. login, logout, etc.
 /************************************************************/
 
+// views - 
+// handles login
 
 
 /************************************************************/
