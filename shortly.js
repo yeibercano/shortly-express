@@ -2,6 +2,7 @@ var express = require('express');
 var util = require('./lib/utility');
 var partials = require('express-partials');
 var bodyParser = require('body-parser');
+var sessions = require('express-sessions');
 
 
 var db = require('./app/config');
@@ -37,8 +38,8 @@ app.get('/links',
 function(req, res) {
   Links.reset().fetch().then(function(links) {
     res.send(200, links.models);
+  res.redirect(links) // added
   });
-  res.render('index'); // added
 });
 
 app.post('/links', 
