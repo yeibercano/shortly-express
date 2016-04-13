@@ -197,6 +197,7 @@ describe('', function() {
           'uri': 'http://127.0.0.1:4568/' + link.get('code')
         };
 
+          console.log('shortcode is being call')
         requestWithSession(options, function(error, res, body) {
           var currentLocation = res.request.href;
           expect(currentLocation).to.equal('https://github.com/');
