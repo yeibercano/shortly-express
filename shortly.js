@@ -2,7 +2,7 @@ var express = require('express');
 var util = require('./lib/utility');
 var partials = require('express-partials');
 var bodyParser = require('body-parser');
-var sessions = require('express-sessions');
+var session = require('express-session');
 
 
 var db = require('./app/config');
